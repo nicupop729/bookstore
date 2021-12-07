@@ -1,7 +1,7 @@
 import Book from './Book';
 import Form from './Form';
 
-const BooksShelf = () => {
+const BookShelf = () => {
   const books = [
     {
       id: 1,
@@ -31,10 +31,21 @@ const BooksShelf = () => {
 
   return (
     <main className="hero">
-      <Book books={books} />
+      {books.map(({
+        id, category, title, author, completed, chapter,
+      }) => (
+        <Book
+          key={id}
+          category={category}
+          title={title}
+          author={author}
+          completed={completed}
+          chapter={chapter}
+        />
+      ))}
       <Form />
     </main>
   );
 };
 
-export default BooksShelf;
+export default BookShelf;
