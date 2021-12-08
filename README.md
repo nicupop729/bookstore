@@ -19,6 +19,10 @@ This app will do the following:
 - Frameworks: React;
 - Technologies used: GitHub, GitFlow, Terminal;
 
+## Live Demo
+
+[Live Demo Link](https://bookstore-with-react.netlify.app/)
+
 ## Getting Started
 
 ### Prerequisites
