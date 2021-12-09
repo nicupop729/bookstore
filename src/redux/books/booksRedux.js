@@ -1,4 +1,4 @@
-import getAllBooksApi from './booksApi';
+import { getAllBooksApi, newBookApi } from './booksApi';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
@@ -22,6 +22,19 @@ export const getInitialBooks = () => (dispatch) => {
       book.author = books[bookID][0].category;
       dispatch(addBook(book));
     });
+  });
+};
+
+export const newBookRedux = (book) => (dispatch) => {
+  const setNewBook = {
+    item_id: book.id,
+    title: book.title,
+    category: book.author,
+  };
+  newBookApi(setNewBook).then((response) => {
+    if (response.ok) {
+      dispatch(addBook(book));
+    }
   });
 };
 
