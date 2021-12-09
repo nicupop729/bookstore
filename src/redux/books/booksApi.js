@@ -13,3 +13,7 @@ export const newBookApi = async (book) => fetch(`${API_URL}/books`, {
   },
   body: JSON.stringify(book),
 });
+
+export const deleteBookApi = async (bookId) => fetch(`${API_URL}/books/${bookId}`, {
+  method: 'DELETE',
+});

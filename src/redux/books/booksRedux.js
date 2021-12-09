@@ -1,4 +1,4 @@
-import { getAllBooksApi, newBookApi } from './booksApi';
+import { getAllBooksApi, newBookApi, deleteBookApi } from './booksApi';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
@@ -34,6 +34,14 @@ export const newBookRedux = (book) => (dispatch) => {
   newBookApi(setNewBook).then((response) => {
     if (response.ok) {
       dispatch(addBook(book));
+    }
+  });
+};
+
+export const deleteBookRedux = (id) => (dispatch) => {
+  deleteBookApi(id).then((response) => {
+    if (response.ok) {
+      dispatch(removeBook(id));
     }
   });
 };
