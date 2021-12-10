@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Book from './Book';
 import AddNewBookForm from './AddNewBookForm';
 import { getInitialBooks } from '../redux/books/booksRedux';
+import './bookShelf.css';
 
 const BookShelf = () => {
   const books = useSelector((state) => state.books);
@@ -18,6 +19,7 @@ const BookShelf = () => {
           <Book id={id} key={id} title={title} author={author} />
         ))}
       </ul>
+      <div className="section-bar" />
       <AddNewBookForm />
     </main>
   );

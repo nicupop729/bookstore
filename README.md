@@ -2,14 +2,16 @@
 
 # Bookstore
 
-> The Bookstore is a web app that allows the user to keep track and register the progress of reading the favorite books:
+> Bookstore is a web app that allows the users to keep track and register the progress of reading of the favorite books:
+
+![screenshot](./src/assets/printscreen.png)
 
 This app will do the following:
 
 - Display a list of books.
-- Add a book.
+- Add books.
 - Edit an entry.
-- Show the details about the book.
+- Show details about the book.
 - Show the progress of reading.
 - Remove a selected book.
 
@@ -66,7 +68,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-This is a project done during React module at **[Microverse](https://www.microverse.org/)**, a remote web-developer school, using their support and frameworks provided.
+This is a project done during React module at **[Microverse](https://www.microverse.org/)**, a remote web-developer school, using their support and frameworks provided.<br />
+Design by **[Zeplin](https://zeplin.io/)**.
 
 ## 📝 License
 
